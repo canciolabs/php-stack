@@ -1,12 +1,12 @@
 {
     "name": "cancio-labs/php-stack",
-    "description": "Interface and implementation of the Stack data structure.",
+    "description": "Interface and an array-based implementation of the LIFO Stack data structure.",
     "keywords": ["stack", "ds", "data structure"],
     "type": "library",
     "require-dev": {
         "phpunit/phpunit": "^10.5.11"
     },
-    "license": "GNU GPLv3",
+    "license": "GPL-3.0-or-later",
     "autoload": {
         "psr-4": {
             "CancioLabs\\Ds\\Stack\\": "src/"
