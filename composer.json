@@ -1,6 +1,6 @@
 {
     "name": "cancio-labs/php-stack",
-    "description": "Interface and implementation of the Stack data structure.",
+    "description": "Interface and an array-based implementation of the LIFO Stack data structure.",
     "keywords": ["stack", "ds", "data structure"],
     "type": "library",
     "require-dev": {
