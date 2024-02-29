@@ -3,8 +3,9 @@
 namespace CancioLabs\Ds\Stack;
 
 use Countable;
+use IteratorAggregate;
 
-interface StackInterface extends Countable
+interface StackInterface extends Countable, IteratorAggregate
 {
 
     /**
@@ -13,12 +14,12 @@ interface StackInterface extends Countable
     public function push(mixed $element): static;
 
     /**
-     * Remove and return the top element.
+     * Remove and return the top element of the stack.
      */
     public function pop(): mixed;
 
     /**
-     * Returns the top element of the stack.
+     * Return the top element of the stack.
      */
     public function top(): mixed;
 
@@ -26,5 +27,10 @@ interface StackInterface extends Countable
      * Test whether the stack is empty.
      */
     public function isEmpty(): bool;
+
+    /**
+     * Remove all elements from the stack.
+     */
+    public function clear(): static;
 
 }
