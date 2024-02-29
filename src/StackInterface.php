@@ -27,4 +27,9 @@ interface StackInterface extends Countable
      */
     public function isEmpty(): bool;
 
+    /**
+     * Remove all elements from the stack.
+     */
+    public function clear(): static;
+
 }
