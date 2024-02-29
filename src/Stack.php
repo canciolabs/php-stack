@@ -39,6 +39,13 @@ class Stack implements StackInterface
         return empty($this->stack);
     }
 
+    public function clear(): static
+    {
+        $this->stack = [];
+
+        return $this;
+    }
+
     public function count(): int
     {
         return count($this->stack);

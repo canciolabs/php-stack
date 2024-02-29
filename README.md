@@ -10,6 +10,7 @@ This tiny package contains an interface and an array-based implementation of the
 | pop     | Remove and return the top element.         |
 | top     | Returns the top element of the stack.      |
 | isEmpty | Test whether the stack is empty.           |
+| clear   | Remove all elements from the stack.        |
 
 ## Tests and Coverage
 

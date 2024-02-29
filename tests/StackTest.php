@@ -69,6 +69,28 @@ class StackTest extends TestCase
         $this->assertSame('B', $stack->top());
     }
 
+    /**
+     * @after testStackWithThreeElements
+     */
+    public function testClear(): void
+    {
+        $stack = new Stack();
+
+        $stack->push('A');
+        $stack->push('B');
+        $stack->push('C');
+
+        $this->assertFalse($stack->isEmpty());
+        $this->assertCount(3, $stack);
+
+        $emptyStack2 = $stack->clear();
+
+        $this->assertSame($emptyStack2, $stack);
+
+        $this->assertTrue($stack->isEmpty());
+        $this->assertCount(0, $stack);
+    }
+
     public function testPopWhenStackIsEmpty(): void
     {
         $stack = new Stack();
