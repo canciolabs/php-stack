@@ -3,6 +3,7 @@
 namespace Test\CancioLabs\Ds\Stack;
 
 use CancioLabs\Ds\Stack\Exception\EmptyStackException;
+use CancioLabs\Ds\Stack\Iterator\StackIterator;
 use CancioLabs\Ds\Stack\Stack;
 use PHPUnit\Framework\TestCase;
 
@@ -89,6 +90,15 @@ class StackTest extends TestCase
 
         $this->assertTrue($stack->isEmpty());
         $this->assertCount(0, $stack);
+    }
+
+    public function testGetIterator(): void
+    {
+        $stack = new Stack();
+
+        $it = $stack->getIterator();
+
+        $this->assertInstanceOf(StackIterator::class, $it);
     }
 
     public function testPopWhenStackIsEmpty(): void

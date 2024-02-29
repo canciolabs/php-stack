@@ -3,8 +3,9 @@
 namespace CancioLabs\Ds\Stack;
 
 use Countable;
+use IteratorAggregate;
 
-interface StackInterface extends Countable
+interface StackInterface extends Countable, IteratorAggregate
 {
 
     /**
