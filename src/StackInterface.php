@@ -13,12 +13,12 @@ interface StackInterface extends Countable
     public function push(mixed $element): static;
 
     /**
-     * Remove and return the top element.
+     * Remove and return the top element of the stack.
      */
     public function pop(): mixed;
 
     /**
-     * Returns the top element of the stack.
+     * Return the top element of the stack.
      */
     public function top(): mixed;
 
