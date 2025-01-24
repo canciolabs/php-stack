@@ -9,32 +9,32 @@ interface StackInterface extends Countable, IteratorAggregate
 {
 
     /**
-     * Add a new element to the top of the stack.
+     * Adds a new element to the top of the stack.
      */
     public function push(mixed $element): static;
 
     /**
-     * Remove and return the top element of the stack.
+     * Removes and return the top element of the stack.
      */
     public function pop(): mixed;
 
     /**
-     * Return the top element of the stack.
+     * Returns the top element of the stack.
      */
     public function top(): mixed;
 
     /**
-     * Test whether the stack is empty.
+     * Tests whether the stack is empty.
      */
     public function isEmpty(): bool;
 
     /**
-     * Remove all elements from the stack.
+     * Removes all elements from the stack.
      */
     public function clear(): static;
 
     /**
-     * Transform the stack into an array.
+     * Transforms the stack into an array.
      */
     public function toArray(): array;
 
