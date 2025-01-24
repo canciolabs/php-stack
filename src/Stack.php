@@ -63,4 +63,9 @@ class Stack implements StackInterface
         return new StackIterator($this);
     }
 
+    public function toArray(): array
+    {
+        return $this->stack;
+    }
+
 }
