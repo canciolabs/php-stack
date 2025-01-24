@@ -33,4 +33,9 @@ interface StackInterface extends Countable, IteratorAggregate
      */
     public function clear(): static;
 
+    /**
+     * Transform the stack into an array.
+     */
+    public function toArray(): array;
+
 }
