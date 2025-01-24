@@ -4,12 +4,17 @@ namespace CancioLabs\Ds\Stack;
 
 use CancioLabs\Ds\Stack\Exception\EmptyStackException;
 use CancioLabs\Ds\Stack\Iterator\StackIterator;
-use Traversable;
+use Iterator;
 
 class Stack implements StackInterface
 {
 
-    private array $stack = [];
+    private array $stack;
+
+    public function __construct(array $stack = [])
+    {
+        $this->stack = $stack;
+    }
 
     public function push(mixed $element): static
     {
@@ -53,9 +58,14 @@ class Stack implements StackInterface
         return count($this->stack);
     }
 
-    public function getIterator(): Traversable
+    public function getIterator(): Iterator
     {
         return new StackIterator($this);
+    }
+
+    public function toArray(): array
+    {
+        return $this->stack;
     }
 
 }
