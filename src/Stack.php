@@ -9,7 +9,12 @@ use Traversable;
 class Stack implements StackInterface
 {
 
-    private array $stack = [];
+    private array $stack;
+
+    public function __construct(array $stack = [])
+    {
+        $this->stack = $stack;
+    }
 
     public function push(mixed $element): static
     {
