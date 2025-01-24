@@ -4,22 +4,21 @@ This tiny package contains an interface and an array-based implementation of the
 
 ## Interface
 
-| Method  | Description                                 |
-|---------|---------------------------------------------|
-| push    | Add a new element to the top of the stack.  |
-| pop     | Remove and return the top element of the stack.          |
-| top     | Return the top element of the stack.       |
-| isEmpty | Test whether the stack is empty.            |
-| clear   | Remove all elements from the stack.         |
-| count   | Return the number of elements of the stack. |
+| Method  | Description                                      |
+|---------|--------------------------------------------------|
+| push    | Adds a new element to the top of the stack.      |
+| pop     | Removes and return the top element of the stack. |
+| top     | Returns the top element of the stack.            |
+| isEmpty | Tests whether the stack is empty.                |
+| clear   | Removes all elements from the stack.             |
+| count   | Returns the number of elements of the stack.     |
+| toArray | Transforms the stack into an array.              |
 
 ## How to use it
 
 ```
-$stack = new Stack();
+$stack = new Stack(['A', 'B']);
 
-$stack->push('A');
-$stack->push('B');
 $stack->push('C');
 $stack->push('D');
 
@@ -29,8 +28,12 @@ $stack->count(); // returns 4
 $stack->top(); // output 'D'
 $stack->pop(); // returns 'D'
 
+$array = $stack->toArray(); // return ['A', 'B', 'C']
+
 foreach ($stack as $element) {
-    // $element = 'C', 'D', 'A'
+    // i=0: $element = 'C'
+    // i=1: $element = 'B'
+    // i=2: $element = 'A'
 }
 
 $stack->isEmpty(); // returns true 
