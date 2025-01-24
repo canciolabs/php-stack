@@ -16,6 +16,10 @@ class StackTest extends TestCase
 
         $this->assertCount(0, $stack);
         $this->assertTrue($stack->isEmpty());
+
+        $stack = new Stack(['A', 'B', 'C', 'D']);
+        $this->assertCount(4, $stack);
+        $this->assertFalse($stack->isEmpty());
     }
 
     /**
@@ -119,6 +123,27 @@ class StackTest extends TestCase
         $this->expectExceptionMessage('Unable to return the top element as the stack is empty.');
 
         $stack->top();
+    }
+
+    public function testToArray(): void
+    {
+        $stack = new Stack();
+
+        $this->assertSame([], $stack->toArray());
+
+        $stack->push('A');
+        $stack->push('B');
+        $stack->push('C');
+
+        $this->assertSame(['A', 'B', 'C'], $stack->toArray());
+
+        $stack->pop();
+
+        $this->assertSame(['A', 'B'], $stack->toArray());
+
+        $stack->clear();
+
+        $this->assertSame([], $stack->toArray());
     }
 
 }
